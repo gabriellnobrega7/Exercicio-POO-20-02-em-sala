@@ -27,9 +27,32 @@ public class ContaBancaria {
         System.out.println("Valor atual: " + resultado);
 
     }
+        /*void depositar(double valor){
+            if(valor >= 0){
+                saldo += valor;
+                sout("operação realizada com sucesso!");
+
+            }
+            else{
+            sout("ERRO");
+            }
+        }
+
+        */
+
 
     
+    
+        /*void sacar(double valor){
+            if(valor >= 0){
+                saldo -= valor;
+                sout("operação realizada com sucesso!");
 
+            }
+            else{
+            sout("ERRO");
+            }
+        }*/
 
 
 }
