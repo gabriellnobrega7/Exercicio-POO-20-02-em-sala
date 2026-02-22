@@ -16,43 +16,44 @@ public class ContaBancaria {
         this.numero = numero;
         this.saldo = saldoinicial;
     }
+    
+    
+    void criarConta(){
 
-
-    public void Depositar(double saldoinicial){
-
-        System.out.println("Qual valor você deseja adicionar à sua conta?");
-        saldo = input.nextDouble();
-
-        double resultado = saldoinicial + saldo;
-        System.out.println("Valor atual: " + resultado);
+        System.out.println("Digite o nome do titular:");
+        
 
     }
-        /*void depositar(double valor){
-            if(valor >= 0){
-                saldo += valor;
-                sout("operação realizada com sucesso!");
-
-            }
-            else{
-            sout("ERRO");
-            }
-        }
-
-        */
-
-
+   void depositar(double valor){
+    if(valor > 0){
+        saldo += valor;
+        System.out.println("Depósito realizado!");
+    } else {
+        System.out.println("Valor inválido!");
+    }
+}
     
-    
-        /*void sacar(double valor){
-            if(valor >= 0){
-                saldo -= valor;
-                sout("operação realizada com sucesso!");
+    void sacar(double valor){
 
-            }
-            else{
-            sout("ERRO");
-            }
-        }*/
+    if(valor <= 0){
+        System.out.println("Valor inválido! O saque deve ser positivo.");
+    }
+    else if(valor > saldo){
+        System.out.println("Saldo insuficiente!");
+    }
+    else{
+        saldo -= valor;
+        System.out.println("Saque realizado com sucesso!");
+    }
+
+}
+    void exibirSaldo(){
+
+        System.out.println("Número da conta: " + numero);
+        System.out.println("Nome do titular: " + nome);
+        System.out.println("Saldo: " + saldo);
+
+    }
 
 
 }
